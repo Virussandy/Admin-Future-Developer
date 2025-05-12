@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://admin-future-developer.onrender.com/api/auth/login",
+        "http://34.233.134.148:5000/api/auth/login",
         {
           email,
           password,

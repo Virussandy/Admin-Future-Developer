@@ -18,7 +18,7 @@ const Dashboard = () => {
     const fetchUser = async () => {
       try {
         const res = await axios.get(
-          "https://admin-future-developer.onrender.com/api/auth/user",
+          "http://34.233.134.148:5000/api/auth/user",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -37,7 +37,7 @@ const Dashboard = () => {
   const fetchHomework = async (classNum) => {
     try {
       const res = await axios.get(
-        `https://admin-future-developer.onrender.com/api/homework/by-class/${classNum}`,
+        `http://34.233.134.148:5000/api/homework/by-class/${classNum}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -50,7 +50,7 @@ const Dashboard = () => {
 
   // const fetchStudents = async () => {
   //   try {
-  //     const res = await axios.get('https://admin-future-developer.onrender.com/api/students/all', {
+  //     const res = await axios.get('http://34.233.134.148:5000/api/students/all', {
   //       headers: { Authorization: `Bearer ${token}` },
   //     });
   //     setStudents(res.data.students);
@@ -62,7 +62,7 @@ const Dashboard = () => {
   // const handleDeleteStudent = async (id) => {
   //   if (!window.confirm('Are you sure you want to delete this student?')) return;
   //   try {
-  //     await axios.delete(`https://admin-future-developer.onrender.com/api/students/delete/${id}`, {
+  //     await axios.delete(`http://34.233.134.148:5000/api/students/delete/${id}`, {
   //       headers: { Authorization: `Bearer ${token}` },
   //     });
   //     setStudents(students.filter((s) => s._id !== id));
@@ -84,7 +84,7 @@ const Dashboard = () => {
     setLoading(true);
     try {
       await axios.post(
-        "https://admin-future-developer.onrender.com/api/homework/upload",
+        "http://34.233.134.148:5000/api/homework/upload",
         formData,
         {
           headers: {
@@ -108,7 +108,7 @@ const Dashboard = () => {
     if (!window.confirm("Are you sure you want to delete this file?")) return;
     try {
       await axios.delete(
-        `https://admin-future-developer.onrender.com/api/homework/${id}`,
+        `http://34.233.134.148:5000/api/homework/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -180,7 +180,7 @@ const Dashboard = () => {
                   className="border p-3 rounded bg-gray-50 flex justify-between items-center"
                 >
                   <a
-                    href={`https://admin-future-developer.onrender.com/uploads/${item.file}`}
+                    href={`http://34.233.134.148:5000/uploads/${item.file}`}
                     target="_blank"
                     rel="noreferrer"
                     className="text-blue-600 underline"

@@ -17,7 +17,7 @@ const Register = () => {
     setSuccess("");
     try {
       await axios.post(
-        "https://admin-future-developer.onrender.com/api/auth/register",
+        "http://34.233.134.148:5000/api/auth/register",
         {
           username,
           email,

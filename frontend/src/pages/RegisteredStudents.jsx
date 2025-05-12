@@ -11,7 +11,7 @@ const RegisteredStudents = () => {
     const fetchStudents = async () => {
       try {
         const res = await axios.get(
-          "https://admin-future-developer.onrender.com/api/students/all",
+          "http://34.233.134.148:5000/api/students/all",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -32,7 +32,7 @@ const RegisteredStudents = () => {
       return;
     try {
       await axios.delete(
-        `https://admin-future-developer.onrender.com/api/students/delete/${id}`,
+        `http://34.233.134.148:5000/api/students/delete/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
